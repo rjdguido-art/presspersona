@@ -3,35 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PressPersona crafts premium web marketing and design experiences for bold brands." />
-    <title>PressPersona · Web Marketing & Design</title>
+    <meta
+      name="description"
+      content="PressPersona — editorial portfolio of brand programs, case studies, and arts projects."
+    />
+    <title>PressPersona</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="glow" aria-hidden="true"></div>
-    <header class="site-header">
-      <div class="logo">
-        <span class="dot"></span>
-        <strong>PressPersona</strong>
-      </div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Primary">
+      <div class="wordmark">PressPersona</div>
       <div class="header-actions">
-        <button id="accent-toggle" type="button" aria-label="Switch accent color"></button>
-        <a class="ghost-btn" href="mailto:hello@presspersona.com">Talk with us</a>
+        <a class="btn-quote" href="mailto:presspersona@outlook.com">Get a Quote</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-overlay">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Open menu</span>
+        </button>
       </div>
     </header>
 
+<<<<<<< Updated upstream
     <main>
       <section class="hero" id="home">
         <div class="hero-copy">
@@ -44,236 +44,219 @@
           <div class="hero-actions">
             <a class="primary-btn" href="#contact">Plan a project</a>
             <button class="secondary-btn" type="button" data-scroll="#work">See our work</button>
+=======
+    <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+      <div class="menu-overlay__panel" role="dialog" aria-modal="true" aria-label="PressPersona menu">
+        <button class="menu-close" aria-label="Close menu">×</button>
+        <div class="menu-overlay__grid">
+          <div class="menu-overlay__nav">
+            <p class="eyebrow">Navigation</p>
+            <a href="#case-studies">Case Studies</a>
+            <a href="#arts">Arts & Culture</a>
+            <a class="btn-quote" href="mailto:presspersona@outlook.com">Get a Quote</a>
+            <div class="menu-meta">
+              <a href="mailto:presspersona@outlook.com">Work with us</a>
+              <a href="#">Team</a>
+              <a href="#">Careers</a>
+              <a href="#">Press</a>
+            </div>
+>>>>>>> Stashed changes
           </div>
-          <div class="metrics">
+          <div class="menu-overlay__stories">
+            <p class="eyebrow">Stories</p>
+            <ul>
+              <li>
+                <img src="https://picsum.photos/seed/story1/120/80" alt="Story 1" />
+                <div>
+                  <p>Story</p>
+                  <strong>Learning from joy.</strong>
+                </div>
+                <span aria-hidden="true">→</span>
+              </li>
+              <li>
+                <img src="https://picsum.photos/seed/story2/120/80" alt="Story 2" />
+                <div>
+                  <p>Story</p>
+                  <strong>Gardens for the future.</strong>
+                </div>
+                <span aria-hidden="true">→</span>
+              </li>
+              <li>
+                <img src="https://picsum.photos/seed/story3/120/80" alt="Story 3" />
+                <div>
+                  <p>Story</p>
+                  <strong>The physics of delight.</strong>
+                </div>
+                <span aria-hidden="true">→</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero is-observe" id="home">
+        <div class="container">
+          <p class="eyebrow">PressPersona</p>
+          <h1>Rewrite how the world values your practice.</h1>
+          <figure class="hero-media">
+            <img src="https://picsum.photos/seed/hero/1200/640" alt="Featured work collage" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-studies is-observe" id="case-studies">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Case Studies</p>
             <div>
-              <span>120+</span>
-              <p>product launches amplified</p>
-            </div>
-            <div>
-              <span>38%</span>
-              <p>avg. lift across campaigns</p>
-            </div>
-            <div>
-              <span>3.2x</span>
-              <p>faster concept-to-launch</p>
+              <h2>We render businesses so irresistible they tilt markets.</h2>
+              <a class="btn-pill" href="#">Explore</a>
             </div>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="orb orb-one"></div>
-          <div class="orb orb-two"></div>
-          <div class="screen">
-            <div class="screen-top">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="screen-body">
-              <p>PressPersona Studio</p>
-              <div class="chip">Live campaigns</div>
-              <div class="graph">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+        <div class="case-rail-wrapper">
+          <div class="case-rail loop" aria-label="Case study gallery">
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case1/480/600" alt="Vessna brand" />
+              <div>
+                <strong>Vessna</strong>
+                <p>Global ritual brand for daily calm.</p>
               </div>
-              <small>Experience that feels inevitable.</small>
-            </div>
+            </article>
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case2/480/600" alt="Marin Labs" />
+              <div>
+                <strong>Marin Labs</strong>
+                <p>Biotech story-craft for care networks.</p>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case3/480/600" alt="Studio Alto" />
+              <div>
+                <strong>Studio Alto</strong>
+                <p>Architecture films about human scale.</p>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case4/480/600" alt="Hyperia" />
+              <div>
+                <strong>Hyperia</strong>
+                <p>Commerce interface for slow luxury.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case1/480/600" alt="" />
+              <div>
+                <strong>Vessna</strong>
+                <p>Global ritual brand for daily calm.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case2/480/600" alt="" />
+              <div>
+                <strong>Marin Labs</strong>
+                <p>Biotech story-craft for care networks.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case3/480/600" alt="" />
+              <div>
+                <strong>Studio Alto</strong>
+                <p>Architecture films about human scale.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case4/480/600" alt="" />
+              <div>
+                <strong>Hyperia</strong>
+                <p>Commerce interface for slow luxury.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="clients" aria-label="Trusted brands">
-        <p>Trusted by product teams across commerce, media, and climate.</p>
-        <div class="client-grid">
-          <span>Nimbus</span>
-          <span>Monocle Labs</span>
-          <span>Horizon</span>
-          <span>Solara</span>
-          <span>Analog</span>
-          <span>Bloom & Co</span>
-        </div>
-      </section>
-
-      <section class="services" id="services">
-        <header>
-          <p class="eyebrow">What we deliver</p>
-          <h2>Elastic teams, full-stack craft.</h2>
-          <p>From brand strategy to performance marketing, we orchestrate every detail.</p>
-        </header>
-        <div class="service-grid">
-          <article>
-            <h3>Signature sites</h3>
-            <p>Marketing systems that scale with your releases, optimized for every breakpoint.</p>
-            <ul>
-              <li>Design systems & component audits</li>
-              <li>Webflow, headless, or custom builds</li>
-              <li>Accessibility & performance baked in</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Growth experiments</h3>
-            <p>Campaign strategy, landing iterations, and analytics instrumentation.</p>
-            <ul>
-              <li>Conversion research & heatmaps</li>
-              <li>Always-on creative testing</li>
-              <li>Insight dashboards for every launch</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Product storytelling</h3>
-            <p>Films, visuals, and content that feel crafted for keynote reveals.</p>
-            <ul>
-              <li>Motion design & 3D prototyping</li>
-              <li>Editorial and product copy</li>
-              <li>Launch playbooks & press kits</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="highlight" id="studio">
-        <div>
-          <p class="eyebrow">Studio ethos</p>
-          <h2>Quiet confidence, measurable impact.</h2>
-          <p>
-            We obsess over the micro-interactions that make users trust your product. From
-            gradients to grid, every choice is rooted in research and A/B validation.
-          </p>
-          <div class="listings">
+      <section class="arts is-observe" id="arts">
+        <div class="arts-backdrop" aria-hidden="true"></div>
+        <div class="arts-content container">
+          <div class="arts-hero">
             <div>
-              <strong>01</strong>
-              <p>Immersive sprints with your GTM and design teams.</p>
+              <p class="eyebrow">Arts & Culture</p>
+              <h2>Learning to see with unhurried attention.</h2>
+              <a class="btn-pill light" href="#">Explore</a>
             </div>
-            <div>
-              <strong>02</strong>
-              <p>Hybrid workflows: Notion, Figma, Webflow, custom stacks.</p>
+            <figure>
+              <img src="https://picsum.photos/seed/arts/1000/600" alt="Arts & culture" />
+            </figure>
+          </div>
+          <div class="story-rail" aria-label="Stories">
+            <article>
+              <img src="https://picsum.photos/seed/storyA/320/200" alt="Story A" />
+              <div>
+                <p>Story</p>
+                <strong>Night lectures in Lisbon.</strong>
+              </div>
+              <span aria-hidden="true">→</span>
+            </article>
+            <article>
+              <img src="https://picsum.photos/seed/storyB/320/200" alt="Story B" />
+              <div>
+                <p>Story</p>
+                <strong>Textiles for protest.</strong>
+              </div>
+              <span aria-hidden="true">→</span>
+            </article>
+            <article>
+              <img src="https://picsum.photos/seed/storyC/320/200" alt="Story C" />
+              <div>
+                <p>Story</p>
+                <strong>Serif school, season six.</strong>
+              </div>
+              <span aria-hidden="true">→</span>
+            </article>
+          </div>
+          <div class="endcap">
+            <div class="endcap-links">
+              <a href="#arts">Arts & Culture</a>
+              <a href="#case-studies">Stories</a>
             </div>
-            <div>
-              <strong>03</strong>
-              <p>Launch ops with analytics, QA, and live optimization.</p>
+            <div class="endcap-meta">
+              <div class="meta-links">
+                <a href="mailto:presspersona@outlook.com">Work with us</a>
+                <a href="#">Team</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+              </div>
+              <div class="newsletter">
+                <p>Keep up to date</p>
+                <form class="newsletter-form">
+                  <label for="email" class="sr-only">Email</label>
+                  <input type="email" id="email" placeholder="Email" required />
+                  <button type="submit" aria-label="Submit email">→</button>
+                </form>
+                <div class="social-links">
+                  <a href="#">X</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="highlight-panel" aria-hidden="true">
-          <div class="panel-card">
-            <p>Live session</p>
-            <h3>Keynote polish</h3>
-            <p class="muted">Shaping storyboards + hero animations.</p>
-            <div class="avatars">
-              <span></span><span></span><span></span>
-            </div>
-            <button type="button">Join review</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="case-studies" id="work">
-        <header>
-          <p class="eyebrow">Selected collaborations</p>
-          <h2>Launches that feel inevitable.</h2>
-        </header>
-        <div class="study-grid">
-          <article>
-            <div class="study-tag">Commerce</div>
-            <h3>Horizon</h3>
-            <p>Redesigned their entire acquisition flow and motion system. +51% conversion.</p>
-            <a href="#">View the system</a>
-          </article>
-          <article>
-            <div class="study-tag">Climate Tech</div>
-            <h3>Solara</h3>
-            <p>Product microsite with cinematic hero sequences and live data overlays.</p>
-            <a href="#">Peek behind the build</a>
-          </article>
-          <article>
-            <div class="study-tag">Media</div>
-            <h3>Analog</h3>
-            <p>Design language for their streaming platform and subscription growth loops.</p>
-            <a href="#">Discover the playbook</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="testimonials" id="testimonials">
-        <header>
-          <p class="eyebrow">Notes from partners</p>
-          <h2>“They make launches feel like product drops.”</h2>
-        </header>
-        <div class="testimonial-slider">
-          <article data-testimonial>
-            <p>
-              “PressPersona delivered a site that feels like a flagship product. Every motion was
-              tuned to the millisecond. We saw a 40% uplift in demo requests within weeks.”
-            </p>
-            <div>
-              <strong>Mayra Patel</strong>
-              <span>VP Growth, Horizon</span>
-            </div>
-          </article>
-          <article data-testimonial>
-            <p>
-              “They operate like an embedded team. Strategy decks, content scripts, analytics—all
-              cohesive and calm. Our Series C announce felt effortless.”
-            </p>
-            <div>
-              <strong>Jonah Lee</strong>
-              <span>Founder, Solara</span>
-            </div>
-          </article>
-          <article data-testimonial>
-            <p>
-              “We trust them with our boldest experiments. They translate ambitious creative into
-              performance-ready experiences.”
-            </p>
-            <div>
-              <strong>Elena Marsh</strong>
-              <span>Head of Product, Analog</span>
-            </div>
-          </article>
-        </div>
-        <div class="slider-controls">
-          <button type="button" class="slider-btn" data-direction="prev">Prev</button>
-          <div class="slider-dots" role="tablist"></div>
-          <button type="button" class="slider-btn" data-direction="next">Next</button>
-        </div>
-      </section>
-
-      <section class="cta" id="contact">
-        <div>
-          <p class="eyebrow">Let’s design the next launch</p>
-          <h2>Tell us what you’re building.</h2>
-          <p>
-            We’ll assemble a bespoke team, define the roadmap, and get prototypes into your hands
-            within days.
-          </p>
-        </div>
-        <form class="cta-form">
-          <label>
-            Project focus
-            <input type="text" placeholder="Website, product film, growth sprint..." required />
-          </label>
-          <label>
-            Email
-            <input type="email" placeholder="you@company.com" required />
-          </label>
-          <label>
-            Timeline
-            <select>
-              <option>Immediately</option>
-              <option>Within the next month</option>
-              <option>Quarterly planning</option>
-            </select>
-          </label>
-          <button type="submit" class="primary-btn">Send details</button>
-        </form>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> PressPersona. Crafted between San Francisco and Lisbon.</p>
-      <a href="mailto:hello@presspersona.com">hello@presspersona.com</a>
+      <div class="container">
+        <p>© <span id="year"></span> PressPersona.</p>
+        <div class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="mailto:presspersona@outlook.com">presspersona@outlook.com</a>
+        </div>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

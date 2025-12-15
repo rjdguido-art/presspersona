@@ -1,107 +1,92 @@
-const root = document.documentElement;
-const accentToggle = document.getElementById('accent-toggle');
-const scrollTrigger = document.querySelector('[data-scroll]');
-const testimonialCards = [...document.querySelectorAll('[data-testimonial]')];
-const sliderDotsContainer = document.querySelector('.slider-dots');
-const sliderButtons = document.querySelectorAll('.slider-btn');
-const heroVisual = document.querySelector('.hero-visual');
-const yearEl = document.getElementById('year');
+let menuToggle;
+let menuOverlay;
+let menuClose;
+let observerTargets;
+let yearEl;
+let previousFocus;
+let focusTrapCleanup;
 
-const accents = ['#7f8cff', '#b16dff', '#ff8ea1', '#67eaca'];
-let accentIndex = 0;
-let testimonialIndex = 0;
-let sliderInterval;
+function cacheDom() {
+  menuToggle = document.querySelector('.menu-toggle');
+  menuOverlay = document.getElementById('menu-overlay');
+  menuClose = document.querySelector('.menu-close');
+  observerTargets = document.querySelectorAll('.is-observe');
+  yearEl = document.getElementById('year');
+}
 
-function updateAccent(color) {
-  root.style.setProperty('--accent', color);
-  root.style.setProperty('--accent-strong', color);
-  if (accentToggle) {
-    accentToggle.style.background = `linear-gradient(145deg, ${color}, ${color}80)`;
+function setOverlayState(open) {
+  if (!menuOverlay) return;
+  menuOverlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+  menuToggle?.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (open) {
+    previousFocus = document.activeElement;
+    focusTrapCleanup = trapFocus(menuOverlay);
+    menuOverlay.querySelector('a, button')?.focus();
+    document.body.style.overflow = 'hidden';
+  } else {
+    focusTrapCleanup?.();
+    document.body.style.overflow = '';
+    previousFocus?.focus();
   }
 }
 
-function cycleAccent() {
-  accentIndex = (accentIndex + 1) % accents.length;
-  updateAccent(accents[accentIndex]);
+function trapFocus(container) {
+  const focusable = container.querySelectorAll(
+    'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+  );
+  if (!focusable.length) return () => {};
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  function handleKey(event) {
+    if (event.key !== 'Tab') return;
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+  container.addEventListener('keydown', handleKey);
+  return () => container.removeEventListener('keydown', handleKey);
 }
 
-function initScrollTrigger() {
-  if (!scrollTrigger) return;
-  scrollTrigger.addEventListener('click', () => {
-    const target = scrollTrigger.getAttribute('data-scroll');
-    const el = document.querySelector(target);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+function handleMenu() {
+  menuToggle?.addEventListener('click', () => {
+    const isOpen = menuOverlay?.getAttribute('aria-hidden') === 'false';
+    setOverlayState(!isOpen);
+  });
+  menuClose?.addEventListener('click', () => setOverlayState(false));
+  menuOverlay?.addEventListener('click', (event) => {
+    if (event.target === menuOverlay) {
+      setOverlayState(false);
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuOverlay?.getAttribute('aria-hidden') === 'false') {
+      setOverlayState(false);
     }
   });
 }
 
-function buildDots() {
-  if (!sliderDotsContainer) return [];
-  return testimonialCards.map((_, index) => {
-    const dot = document.createElement('button');
-    dot.type = 'button';
-    dot.addEventListener('click', () => showTestimonial(index));
-    sliderDotsContainer.appendChild(dot);
-    return dot;
-  });
-}
-
-const sliderDots = buildDots();
-
-function showTestimonial(index) {
-  if (!testimonialCards.length) return;
-  testimonialIndex = (index + testimonialCards.length) % testimonialCards.length;
-  testimonialCards.forEach((card, idx) => {
-    card.classList.toggle('active', idx === testimonialIndex);
-  });
-  sliderDots.forEach((dot, idx) => {
-    dot.classList.toggle('active', idx === testimonialIndex);
-  });
-}
-
-function startSlider() {
-  sliderInterval = setInterval(() => {
-    showTestimonial(testimonialIndex + 1);
-  }, 6000);
-}
-
-function resetSlider() {
-  clearInterval(sliderInterval);
-  startSlider();
-}
-
-function initSlider() {
-  if (!testimonialCards.length) return;
-  showTestimonial(0);
-  startSlider();
-  sliderButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const direction = btn.getAttribute('data-direction');
-      const delta = direction === 'next' ? 1 : -1;
-      showTestimonial(testimonialIndex + delta);
-      resetSlider();
-    });
-  });
-}
-
-function initParallax() {
-  if (!heroVisual) return;
-  window.addEventListener('scroll', () => {
-    const offset = window.scrollY * 0.05;
-    heroVisual.style.transform = `translateY(${offset}px)`;
-  });
-}
-
-function initForm() {
-  const form = document.querySelector('.cta-form');
-  if (!form) return;
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const button = form.querySelector('button');
-    button.textContent = 'Sent · we'll reply soon';
-    button.disabled = true;
-  });
+function initObserver() {
+  if (!observerTargets?.length) return;
+  if (!('IntersectionObserver' in window)) {
+    observerTargets.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  observerTargets.forEach((el) => observer.observe(el));
 }
 
 function initYear() {
@@ -111,12 +96,9 @@ function initYear() {
 }
 
 function init() {
-  updateAccent(accents[accentIndex]);
-  accentToggle?.addEventListener('click', cycleAccent);
-  initScrollTrigger();
-  initSlider();
-  initParallax();
-  initForm();
+  cacheDom();
+  handleMenu();
+  initObserver();
   initYear();
 }
 
