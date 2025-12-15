@@ -60,6 +60,10 @@ function handleMenu() {
   menuOverlay?.addEventListener('click', (event) => {
     if (event.target === menuOverlay) {
       setOverlayState(false);
+      return;
+    }
+    if (event.target instanceof Element && event.target.closest('.menu-overlay__panel a')) {
+      setOverlayState(false);
     }
   });
   document.addEventListener('keydown', (event) => {
@@ -95,9 +99,26 @@ function initYear() {
   }
 }
 
+function initScrollTriggers() {
+  const triggers = document.querySelectorAll('[data-scroll]');
+  if (!triggers.length) return;
+  triggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      const selector = trigger.getAttribute('data-scroll');
+      if (!selector) return;
+      const target = document.querySelector(selector);
+      if (!target) return;
+      event.preventDefault();
+      setOverlayState(false);
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
 function init() {
   cacheDom();
   handleMenu();
+  initScrollTriggers();
   initObserver();
   initYear();
 }
