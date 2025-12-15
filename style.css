@@ -2,15 +2,18 @@
    Apple-like (SF Pro look)
    ========================= */
 :root {
-  --paper: #f4f1ea;
-  --ink: #121212;
-  --muted: rgba(18, 18, 18, 0.65);
-  --hairline: rgba(18, 18, 18, 0.14);
-  --dark: #160b07;
-  --dark2: #0f0a08;
-  --cream: #fff7ef;
-  --pill: rgba(18, 18, 18, 0.08);
-  --pill-dark: rgba(255, 255, 255, 0.12);
+  --paper: #f9f4ec;
+  --ink: #111827;
+  --muted: rgba(17, 24, 39, 0.65);
+  --hairline: rgba(10, 37, 64, 0.14);
+  --dark: #0a2540;
+  --dark2: #05172c;
+  --cream: #ffd166;
+  --primary: #0a2540;
+  --accent: #00a7a7;
+  --highlight: #ffd166;
+  --pill: rgba(10, 37, 64, 0.08);
+  --pill-dark: rgba(255, 255, 255, 0.14);
   --shadow-soft: 0 30px 80px rgba(0, 0, 0, 0.08);
   --radius-card: 26px;
   --container: 1200px;
@@ -104,7 +107,7 @@ input:focus-visible {
   padding: 1.5rem clamp(1rem, 4vw, 5rem);
   position: sticky;
   top: 0;
-  background: rgba(244, 241, 234, 0.92);
+  background: rgba(249, 244, 236, 0.92);
   backdrop-filter: blur(10px);
   z-index: 40;
   border-bottom: 1px solid var(--hairline);
@@ -126,15 +129,17 @@ input:focus-visible {
 .btn-quote {
   padding: 0.45rem 1.5rem;
   border-radius: 999px;
-  border: 1px solid var(--ink);
-  background: transparent;
+  border: 1px solid var(--primary);
+  background: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: background var(--transition);
+  color: var(--primary);
 }
 
 .btn-quote:hover {
-  background: var(--pill);
+  background: var(--primary);
+  color: #fff;
 }
 
 .menu-toggle {
@@ -161,7 +166,7 @@ input:focus-visible {
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 10, 8, 0.85);
+  background: rgba(10, 37, 64, 0.86);
   backdrop-filter: blur(8px);
   opacity: 0;
   pointer-events: none;
@@ -177,10 +182,10 @@ input:focus-visible {
 .menu-overlay__panel {
   width: min(1100px, 92vw);
   margin: clamp(1.5rem, 5vw, 4rem) auto;
-  background: linear-gradient(135deg, rgba(22, 11, 7, 0.95), rgba(10, 7, 6, 0.95));
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.96), rgba(5, 23, 44, 0.97));
   border-radius: var(--radius-card);
   padding: clamp(1.5rem, 4vw, 3.5rem);
-  color: #f5eee7;
+  color: #f9f4ec;
   transform: translateY(10px) scale(0.98);
   transition: transform var(--transition);
 }
@@ -221,6 +226,15 @@ input:focus-visible {
   margin-top: 1rem;
 }
 
+.menu-meta a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.menu-meta span {
+  color: rgba(249, 244, 236, 0.7);
+}
+
 .menu-overlay__stories ul {
   list-style: none;
   margin: 0;
@@ -237,19 +251,20 @@ input:focus-visible {
   align-items: center;
   padding: 0.75rem;
   border-radius: var(--radius-card);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(249, 244, 236, 0.08);
 }
 
 .menu-overlay__stories p {
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(249, 244, 236, 0.68);
   margin: 0 0 0.25rem;
 }
 
 .menu-overlay__stories span {
   font-size: 1.5rem;
+  color: var(--highlight);
 }
 
 main {
@@ -285,7 +300,7 @@ section {
   border-radius: 999px;
   padding: 0.75rem 1.8rem;
   font-weight: 500;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--primary);
   background: transparent;
   cursor: pointer;
   text-decoration: none;
@@ -296,20 +311,20 @@ section {
 }
 
 .primary-btn {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--primary);
+  color: #fff;
 }
 
 .primary-btn:hover {
-  background: #000;
+  background: #081c2f;
 }
 
 .secondary-btn {
-  color: var(--ink);
+  color: var(--primary);
 }
 
 .secondary-btn:hover {
-  background: var(--pill);
+  background: rgba(10, 37, 64, 0.1);
 }
 
 h1,
@@ -371,25 +386,27 @@ section h2 {
   gap: 0.5rem;
   padding: 0.55rem 1.6rem;
   border-radius: 999px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--primary);
   text-decoration: none;
   font-weight: 500;
   background: transparent;
+  color: var(--primary);
   transition: background var(--transition);
 }
 
 .btn-pill.light {
-  color: #fff7ef;
-  border-color: rgba(255, 255, 255, 0.4);
+  color: #f9f4ec;
+  border-color: rgba(255, 255, 255, 0.55);
 }
 
 .btn-pill:hover {
-  background: var(--pill);
+  background: rgba(10, 37, 64, 0.12);
 }
 
 .btn-pill.light:hover {
-  background: var(--pill-dark);
+  background: rgba(255, 255, 255, 0.15);
 }
+
 
 .case-rail-wrapper {
   position: relative;
@@ -421,6 +438,10 @@ section h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.case-card strong {
+  color: var(--primary);
+}
+
 .case-card img {
   border-radius: var(--radius-card);
   height: 360px;
@@ -434,7 +455,7 @@ section h2 {
 
 .arts {
   background: linear-gradient(135deg, var(--dark), var(--dark2));
-  color: #fff7ef;
+  color: #f9f4ec;
   position: relative;
   padding-bottom: 0;
 }
@@ -472,8 +493,8 @@ section h2 {
 }
 
 .story-rail article {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(249, 244, 236, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-card);
   padding: 1rem;
   display: flex;
@@ -483,7 +504,7 @@ section h2 {
 }
 
 .story-rail article:hover {
-  border-color: #fff;
+  border-color: var(--highlight);
   transform: translateY(-3px);
 }
 
@@ -497,13 +518,18 @@ section h2 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(249, 244, 236, 0.75);
   margin: 0;
 }
 
 .story-rail strong {
   font-size: 1.2rem;
   font-family: 'Cormorant Garamond', serif;
+  color: var(--highlight);
+}
+
+.story-rail article span {
+  color: var(--accent);
 }
 
 .endcap {
@@ -521,6 +547,7 @@ section h2 {
 
 .endcap-links a {
   text-decoration: none;
+  color: #f9f4ec;
 }
 
 .endcap-meta {
@@ -537,6 +564,15 @@ section h2 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.7rem;
+}
+
+.meta-links a {
+  color: rgba(249, 244, 236, 0.7);
+  text-decoration: none;
+}
+
+.meta-links a:hover {
+  color: var(--highlight);
 }
 
 .newsletter-form {
@@ -581,6 +617,15 @@ section h2 {
   margin-top: 1rem;
 }
 
+.social-links a {
+  color: #f9f4ec;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--highlight);
+}
+
 .site-footer {
   border-top: 1px solid var(--hairline);
   padding: 2rem 0 3rem;
@@ -597,6 +642,15 @@ section h2 {
 .footer-links {
   display: flex;
   gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
 }
 
 .is-observe {
