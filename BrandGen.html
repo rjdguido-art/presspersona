@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="BrandGen — a PressPersona experiment for instant brand systems."
+    />
+    <title>BrandGen | PressPersona Labs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="BrandGen.css" />
+  </head>
+  <body>
+    <a class="skip" href="#brandgen-embed">Skip to BrandGen</a>
+    <header class="brandgen-header">
+      <div class="container">
+        <div class="brandgen-title">
+          <p class="eyebrow">PressPersona Labs</p>
+          <h1>BrandGen</h1>
+          <p class="lead">
+            A live sandbox where we prototype expressive brand systems powered by AI-driven
+            orchestration.
+          </p>
+        </div>
+        <div class="brandgen-actions">
+          <a class="primary-btn" href="mailto:presspersona@outlook.com">Talk to us</a>
+          <a class="ghost-link" href="index.html">← Back to PressPersona</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="brandgen-main" id="brandgen-embed">
+      <div class="container">
+        <div class="frame-wrapper">
+          <div class="frame-status" data-frame-status aria-live="polite">
+            Loading BrandGen...
+          </div>
+          <iframe
+            id="brandgen-frame"
+            title="BrandGen embedded workspace"
+            src="https://presspersona-brandgen-473218199590.us-west1.run.app/"
+            loading="lazy"
+            allow="fullscreen"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer class="brandgen-footer">
+      <div class="container">
+        <p>PressPersona © <span id="brandgen-year"></span></p>
+        <a href="mailto:presspersona@outlook.com">presspersona@outlook.com</a>
+      </div>
+    </footer>
+
+    <script src="BrandGen.js"></script>
+  </body>
+</html>

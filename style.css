@@ -104,18 +104,19 @@ input:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem clamp(1rem, 4vw, 5rem);
+  padding: 0.55rem clamp(1.25rem, 4vw, 3rem);
   position: sticky;
   top: 0;
   background: rgba(249, 244, 236, 0.92);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
   z-index: 40;
   border-bottom: 1px solid var(--hairline);
+  min-height: 54px;
 }
 
 .wordmark {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -127,7 +128,7 @@ input:focus-visible {
 }
 
 .btn-quote {
-  padding: 0.45rem 1.5rem;
+  padding: 0.35rem 1.3rem;
   border-radius: 999px;
   border: 1px solid var(--primary);
   background: #fff;
@@ -143,8 +144,8 @@ input:focus-visible {
 }
 
 .menu-toggle {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 999px;
   border: 1px solid var(--hairline);
   background: transparent;
@@ -235,36 +236,44 @@ input:focus-visible {
   color: rgba(249, 244, 236, 0.7);
 }
 
-.menu-overlay__stories ul {
-  list-style: none;
+.menu-overlay__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-card);
+  background: rgba(249, 244, 236, 0.08);
+}
+
+.menu-overlay__cta p {
   margin: 0;
-  padding: 0;
+  color: rgba(249, 244, 236, 0.8);
+}
+
+.menu-overlay__cta-copy {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.menu-overlay__stories li {
-  display: grid;
-  grid-template-columns: 120px 1fr auto;
-  gap: 1rem;
+.menu-brandgen-btn {
+  display: inline-flex;
   align-items: center;
-  padding: 0.75rem;
-  border-radius: var(--radius-card);
-  background: rgba(249, 244, 236, 0.08);
-}
-
-.menu-overlay__stories p {
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: var(--highlight);
+  color: var(--dark);
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.75rem;
   letter-spacing: 0.08em;
-  color: rgba(249, 244, 236, 0.68);
-  margin: 0 0 0.25rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.menu-overlay__stories span {
-  font-size: 1.5rem;
-  color: var(--highlight);
+.menu-brandgen-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 main {
