@@ -3,31 +3,67 @@ document.addEventListener('DOMContentLoaded', () => {
   const status = document.querySelector('[data-frame-status]');
   const year = document.getElementById('brandgen-year');
   const header = document.querySelector('.brandgen-header');
-  const compactOffset = 140;
-  let ticking = false;
+  const frameWrapper = document.querySelector('.frame-wrapper');
+  let expandThreshold = 70;
+  let compactThreshold = 200;
+  let scrollTicking = false;
+  let resizeTicking = false;
+  let isCompact = false;
 
   if (year) {
     year.textContent = new Date().getFullYear();
   }
 
+  const computeThresholds = () => {
+    if (!header || !frameWrapper) return;
+    const headerHeight = header.offsetHeight;
+    const wrapperTop = frameWrapper.getBoundingClientRect().top + window.scrollY;
+    const compactStart = Math.max(wrapperTop - headerHeight - 20, headerHeight);
+    const expandStart = Math.max(compactStart - headerHeight - 80, 0);
+    compactThreshold = Math.max(compactStart, expandStart + 60);
+    expandThreshold = Math.min(expandStart, compactThreshold - 40);
+  };
+
   const updateHeaderState = () => {
     if (!header) return;
-    const shouldCompact = window.scrollY > compactOffset;
-    header.classList.toggle('is-compact', shouldCompact);
-    ticking = false;
+    const scrolled = window.scrollY;
+    if (!isCompact && scrolled > compactThreshold) {
+      header.classList.add('is-compact');
+      isCompact = true;
+    } else if (isCompact && scrolled < expandThreshold) {
+      header.classList.remove('is-compact');
+      isCompact = false;
+    }
   };
 
   window.addEventListener(
     'scroll',
     () => {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(updateHeaderState);
+      if (scrollTicking) return;
+      scrollTicking = true;
+      window.requestAnimationFrame(() => {
+        updateHeaderState();
+        scrollTicking = false;
+      });
     },
     { passive: true }
   );
 
-  updateHeaderState();
+  const handleResize = () => {
+    computeThresholds();
+    updateHeaderState();
+  };
+
+  window.addEventListener('resize', () => {
+    if (resizeTicking) return;
+    resizeTicking = true;
+    window.requestAnimationFrame(() => {
+      handleResize();
+      resizeTicking = false;
+    });
+  });
+
+  handleResize();
 
   if (frame && status) {
     const hideStatus = () => {

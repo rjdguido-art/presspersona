@@ -5,6 +5,10 @@ let observerTargets;
 let yearEl;
 let previousFocus;
 let focusTrapCleanup;
+let chatLauncher;
+let chatPanel;
+let chatClose;
+let chatIframe;
 
 function cacheDom() {
   menuToggle = document.querySelector('.menu-toggle');
@@ -12,6 +16,10 @@ function cacheDom() {
   menuClose = document.querySelector('.menu-close');
   observerTargets = document.querySelectorAll('.is-observe');
   yearEl = document.getElementById('year');
+  chatLauncher = document.querySelector('.chat-launcher');
+  chatPanel = document.getElementById('chat-panel');
+  chatClose = document.querySelector('.chat-panel__close');
+  chatIframe = document.querySelector('.chat-panel__iframe');
 }
 
 function setOverlayState(open) {
@@ -115,12 +123,46 @@ function initScrollTriggers() {
   });
 }
 
+function setChatState(open) {
+  if (!chatPanel) return;
+  chatPanel.classList.toggle('is-open', open);
+  chatPanel.setAttribute('aria-hidden', open ? 'false' : 'true');
+  chatLauncher?.setAttribute('aria-expanded', open ? 'true' : 'false');
+  chatLauncher?.classList.toggle('is-hidden', open);
+  if (open) {
+    chatPanel.focus();
+  } else {
+    chatLauncher?.focus();
+  }
+  if (open && chatIframe && !chatIframe.src) {
+    const src = chatIframe.getAttribute('data-src');
+    if (src) {
+      chatIframe.src = src;
+    }
+  }
+}
+
+function handleChatWidget() {
+  if (!chatLauncher || !chatPanel) return;
+  chatLauncher.addEventListener('click', () => {
+    const isOpen = chatPanel.classList.contains('is-open');
+    setChatState(!isOpen);
+  });
+  chatClose?.addEventListener('click', () => setChatState(false));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && chatPanel.classList.contains('is-open')) {
+      setChatState(false);
+    }
+  });
+}
+
 function init() {
   cacheDom();
   handleMenu();
   initScrollTriggers();
   initObserver();
   initYear();
+  handleChatWidget();
 }
 
 document.addEventListener('DOMContentLoaded', init);

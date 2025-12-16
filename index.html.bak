@@ -211,37 +211,6 @@
       </section>
     </main>
 
-    <div class="chat-widget" aria-live="polite">
-      <button
-        class="chat-launcher"
-        type="button"
-        aria-expanded="false"
-        aria-controls="chat-panel"
-      >
-        <span>Chat with BrandGen</span>
-      </button>
-      <section
-        class="chat-panel"
-        id="chat-panel"
-        aria-hidden="true"
-        role="dialog"
-        aria-label="BrandGen chat assistant"
-        tabindex="-1"
-      >
-        <button class="chat-panel__close" type="button" aria-label="Close chat window">
-          &times;
-        </button>
-        <div class="chat-panel__iframe-wrapper" aria-live="off">
-          <iframe
-            class="chat-panel__iframe"
-            title="PressPersona BrandGen chat"
-            data-src="https://presspersona-brandgen-473218199590.us-west1.run.app/?mode=chat"
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
-    </div>
-
     <footer class="site-footer">
       <div class="container">
         <p>© <span id="year"></span> PressPersona.</p>

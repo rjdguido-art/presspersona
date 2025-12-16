@@ -662,6 +662,99 @@ section h2 {
   color: var(--accent);
 }
 
+.chat-widget {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 0.75rem;
+  z-index: 120;
+}
+
+.chat-launcher {
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.3rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(10, 37, 64, 0.2);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chat-panel {
+  width: min(420px, 92vw);
+  height: 560px;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(120, 142, 191, 0.35);
+  box-shadow: 0 25px 70px rgba(25, 33, 52, 0.25);
+  background: #f8fbff;
+  overflow: hidden;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+  display: block;
+  position: relative;
+}
+
+.chat-panel.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.chat-panel__close {
+  border: none;
+  background: transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(120, 142, 191, 0.5);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 2;
+}
+
+.chat-panel__iframe-wrapper {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.chat-panel__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+  display: block;
+}
+
+.chat-launcher.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
 .is-observe {
   opacity: 0;
   transform: translateY(20px);
@@ -695,6 +788,15 @@ section h2 {
   }
   .case-rail-wrapper {
     padding-left: 0;
+  }
+  .chat-widget {
+    left: 1rem;
+    right: 1rem;
+    align-items: stretch;
+  }
+  .chat-panel {
+    width: 100%;
+    height: min(80vh, 520px);
   }
 }
 
