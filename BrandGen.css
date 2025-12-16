@@ -76,6 +76,8 @@ iframe {
   top: 0;
   backdrop-filter: blur(12px);
   z-index: 20;
+  transition: padding 0.25s ease, background 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .brandgen-header .container {
@@ -84,6 +86,17 @@ iframe {
   align-items: center;
   gap: 1.25rem;
   flex-wrap: wrap;
+}
+
+.brandgen-header.is-compact {
+  padding: 0.45rem 0;
+  background: rgba(6, 12, 31, 0.95);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.brandgen-header.is-compact .container {
+  gap: 0.75rem;
 }
 
 .brandgen-header h1 {
@@ -107,6 +120,31 @@ iframe {
 
 .brandgen-actions a {
   text-decoration: none;
+}
+
+.brandgen-header.is-compact .eyebrow,
+.brandgen-header.is-compact .lead {
+  display: none;
+}
+
+.brandgen-header.is-compact .brandgen-title {
+  max-width: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.brandgen-header.is-compact h1 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+
+.brandgen-header.is-compact .brandgen-actions {
+  gap: 0.35rem;
 }
 
 .ghost-link {
@@ -186,6 +224,12 @@ iframe {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .brandgen-header.is-compact .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .brandgen-actions {
