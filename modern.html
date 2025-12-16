@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PressPersona — modern Apple-inspired showcase of brand programs, case studies, and arts projects."
+    />
+    <title>PressPersona — Modern</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="modern.css" />
+  </head>
+  <body>
+    <header class="modern-header">
+      <div class="logo-stack">
+        <a class="logo" href="#home">PressPersona</a>
+        <a class="theme-switch" href="index.html">Classic Theme</a>
+      </div>
+      <nav class="modern-nav" aria-label="Primary">
+        <a href="#home">Overview</a>
+        <a href="#case">Case Studies</a>
+        <a href="#arts">Arts</a>
+        <a href="mailto:presspersona@outlook.com">Contact</a>
+      </nav>
+      <a class="ghost-btn" href="BrandGen.html">Launch BrandGen</a>
+    </header>
+
+    <main class="modern-main" id="home">
+      <section class="panel hero is-observe">
+        <p class="chip">Web marketing & experience design</p>
+        <h1>Flagship polish for brands that move culture.</h1>
+        <p class="lede">
+          Landing systems, marketing sites, and digital touchpoints finished with keynote-level
+          craft. Insight-backed experiments, iconic storytelling.
+        </p>
+        <div class="cta-row">
+          <a class="solid-btn" href="mailto:presspersona@outlook.com">Plan a project</a>
+          <button class="ghost-btn" data-scroll="#case">See work</button>
+        </div>
+        <figure class="hero-frame">
+          <img src="https://picsum.photos/seed/hero/1400/740" alt="Featured work collage" />
+        </figure>
+      </section>
+
+      <section class="panel stack is-observe" id="case">
+        <header>
+          <p class="chip">Case studies</p>
+          <h2>Brand programs with measurable lift.</h2>
+        </header>
+        <div class="grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/case1/680/820" alt="Vessna" />
+            <div>
+              <h3>Vessna</h3>
+              <p>Global ritual brand engineered for daily calm.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/case2/680/820" alt="Marin Labs" />
+            <div>
+              <h3>Marin Labs</h3>
+              <p>Biotech story-craft for care networks.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/case3/680/820" alt="Studio Alto" />
+            <div>
+              <h3>Studio Alto</h3>
+              <p>Architecture films about human scale.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/case4/680/820" alt="Hyperia" />
+            <div>
+              <h3>Hyperia</h3>
+              <p>Commerce interface for slow luxury.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel split is-observe" id="arts">
+        <div>
+          <p class="chip">Arts & Culture</p>
+          <h2>Learning to see with unhurried attention.</h2>
+          <p>
+            Residency notes, textiles, and films shaping a slower internet. Longform stories for
+            collectors and cultural partners.
+          </p>
+          <a class="solid-btn light" href="#">Explore stories</a>
+        </div>
+        <div class="story-list">
+          <article>
+            <img src="https://picsum.photos/seed/storyA/480/360" alt="Story A" />
+            <div>
+              <h3>Night lectures in Lisbon</h3>
+              <p>Analog rituals for new publishing.</p>
+            </div>
+          </article>
+          <article>
+            <img src="https://picsum.photos/seed/storyB/480/360" alt="Story B" />
+            <div>
+              <h3>Textiles for protest</h3>
+              <p>Handcrafted signals in public space.</p>
+            </div>
+          </article>
+          <article>
+            <img src="https://picsum.photos/seed/storyC/480/360" alt="Story C" />
+            <div>
+              <h3>Serif School, season six</h3>
+              <p>Letterforms for tactile experiences.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="chat-widget" aria-live="polite">
+      <button
+        class="chat-launcher"
+        type="button"
+        aria-expanded="false"
+        aria-controls="chat-panel"
+      >
+        Chat with BrandGen
+      </button>
+      <section
+        class="chat-panel"
+        id="chat-panel"
+        aria-hidden="true"
+        role="dialog"
+        aria-label="BrandGen chat assistant"
+        tabindex="-1"
+      >
+        <button class="chat-panel__close" type="button" aria-label="Close chat window">&times;</button>
+        <div class="chat-panel__iframe-wrapper" aria-live="off">
+          <iframe
+            class="chat-panel__iframe"
+            title="PressPersona BrandGen chat"
+            data-src="https://presspersona-brandgen-473218199590.us-west1.run.app/?mode=chat"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </div>
+
+    <footer class="modern-footer">
+      <div>
+        <p>© <span id="modern-year"></span> PressPersona</p>
+        <a href="mailto:presspersona@outlook.com">presspersona@outlook.com</a>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Back to top</a>
+        <a href="BrandGen.html">Labs</a>
+      </div>
+    </footer>
+
+    <script src="modern.js" defer></script>
+  </body>
+</html>

@@ -121,6 +121,27 @@ input:focus-visible {
   text-transform: uppercase;
 }
 
+.logo-cluster {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.theme-switch {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.theme-switch:hover {
+  background: rgba(10, 37, 64, 0.08);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
