@@ -496,16 +496,6 @@ button:focus-visible {
   transform: translateY(6px);
 }
 
-.research-widget {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 30;
-}
-
 .is-observe {
   opacity: 0;
   transform: translateY(30px);
@@ -554,9 +544,5 @@ button:focus-visible {
   .chat-panel {
     width: 100%;
     height: min(80vh, 500px);
-  }
-  .research-widget {
-    left: 1rem;
-    right: 1rem;
   }
 }

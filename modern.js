@@ -5,9 +5,6 @@
   const chatLauncher = document.querySelector('.chat-launcher');
   const chatPanel = document.getElementById('chat-panel');
   const chatIframe = document.querySelector('.chat-panel__iframe');
-  const researchLauncher = document.querySelector('.research-launcher');
-  const researchPanel = document.getElementById('research-panel');
-  const researchIframe = researchPanel?.querySelector('.chat-panel__iframe');
   let heroRotatorTimer;
 
   if (yearEl) {
@@ -133,11 +130,6 @@
     panel: chatPanel,
     iframe: chatIframe,
     hideClass: 'is-hidden',
-  });
-  initWidget({
-    launcher: researchLauncher,
-    panel: researchPanel,
-    iframe: researchIframe,
   });
   initHeroRotator();
 })();
