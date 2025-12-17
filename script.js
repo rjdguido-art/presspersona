@@ -9,6 +9,7 @@ let chatLauncher;
 let chatPanel;
 let chatClose;
 let chatIframe;
+let heroRotatorTimer;
 
 function cacheDom() {
   menuToggle = document.querySelector('.menu-toggle');
@@ -156,6 +157,54 @@ function handleChatWidget() {
   });
 }
 
+function initHeroRotator() {
+  const rotator = document.querySelector('[data-hero-rotator]');
+  if (!rotator) return;
+  const phrases = [
+    {
+      text: 'Give your brand the polish of a flagship launch.',
+      fontClass: 'hero-font-montserrat',
+    },
+    {
+      text: 'Command attention with Titular-black statements.',
+      fontClass: 'hero-font-titular',
+    },
+    {
+      text: 'Warm every touchpoint with Highest Praise flourishes and color.',
+      fontClass: 'hero-font-highest',
+    },
+    {
+      text: 'Pair data and drama with Legitima’s editorial poise.',
+      fontClass: 'hero-font-legitima',
+    },
+  ];
+  const fontClasses = [...new Set(phrases.map((phrase) => phrase.fontClass))];
+  let index = 0;
+
+  const applyPhrase = (idx) => {
+    const phrase = phrases[idx];
+    if (!phrase) return;
+    rotator.textContent = phrase.text;
+    fontClasses.forEach((cls) => rotator.classList.remove(cls));
+    rotator.classList.add(phrase.fontClass);
+  };
+
+  applyPhrase(index);
+
+  if (heroRotatorTimer) {
+    clearInterval(heroRotatorTimer);
+  }
+
+  heroRotatorTimer = window.setInterval(() => {
+    rotator.classList.add('is-transitioning');
+    window.setTimeout(() => {
+      index = (index + 1) % phrases.length;
+      applyPhrase(index);
+      rotator.classList.remove('is-transitioning');
+    }, 225);
+  }, 3500);
+}
+
 function init() {
   cacheDom();
   handleMenu();
@@ -163,6 +212,7 @@ function init() {
   initObserver();
   initYear();
   handleChatWidget();
+  initHeroRotator();
 }
 
 document.addEventListener('DOMContentLoaded', init);

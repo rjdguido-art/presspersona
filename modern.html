@@ -11,12 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500&family=Montserrat:wght@700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/titular" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/highest-praise" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/legitima" />
     <link rel="stylesheet" href="modern.css" />
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
     <header class="modern-header">
       <div class="logo-stack">
         <a class="logo" href="#home">PressPersona</a>
@@ -24,99 +28,189 @@
       </div>
       <nav class="modern-nav" aria-label="Primary">
         <a href="#home">Overview</a>
-        <a href="#case">Case Studies</a>
-        <a href="#arts">Arts</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#arts">Arts & Culture</a>
         <a href="mailto:presspersona@outlook.com">Contact</a>
       </nav>
       <a class="ghost-btn" href="BrandGen.html">Launch BrandGen</a>
     </header>
 
-    <main class="modern-main" id="home">
-      <section class="panel hero is-observe">
+    <main class="modern-main" id="main">
+      <section class="panel modern-hero is-observe" id="home">
         <p class="chip">Web marketing & experience design</p>
-        <h1>Flagship polish for brands that move culture.</h1>
-        <p class="lede">
-          Landing systems, marketing sites, and digital touchpoints finished with keynote-level
-          craft. Insight-backed experiments, iconic storytelling.
-        </p>
-        <div class="cta-row">
-          <a class="solid-btn" href="mailto:presspersona@outlook.com">Plan a project</a>
-          <button class="ghost-btn" data-scroll="#case">See work</button>
+        <h1 class="hero-title hero-font-montserrat" data-hero-rotator>
+          Give your brand the polish of a flagship launch.
+        </h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <div class="hero-brandgen-cta">
+          <a class="solid-btn" href="BrandGen.html">Try BrandGen</a>
+          <button class="ghost-btn" data-scroll="#case-studies">See casework</button>
         </div>
-        <figure class="hero-frame">
-          <img src="https://picsum.photos/seed/hero/1400/740" alt="Featured work collage" />
-        </figure>
+        <h3 class="hero-subhead">
+          Take advantage of BrandGen's AI capabilities to explore new narratives faster.
+        </h3>
+        <div class="hero-video-gallery" aria-label="BrandGen video gallery">
+          <div class="hero-video-track">
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1216.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1217.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1218.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1216.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1217.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1218.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="panel stack is-observe" id="case">
-        <header>
-          <p class="chip">Case studies</p>
-          <h2>Brand programs with measurable lift.</h2>
-        </header>
-        <div class="grid">
-          <article class="card">
-            <img src="https://picsum.photos/seed/case1/680/820" alt="Vessna" />
-            <div>
-              <h3>Vessna</h3>
-              <p>Global ritual brand engineered for daily calm.</p>
-            </div>
-          </article>
-          <article class="card">
-            <img src="https://picsum.photos/seed/case2/680/820" alt="Marin Labs" />
-            <div>
-              <h3>Marin Labs</h3>
-              <p>Biotech story-craft for care networks.</p>
-            </div>
-          </article>
-          <article class="card">
-            <img src="https://picsum.photos/seed/case3/680/820" alt="Studio Alto" />
-            <div>
-              <h3>Studio Alto</h3>
-              <p>Architecture films about human scale.</p>
-            </div>
-          </article>
-          <article class="card">
-            <img src="https://picsum.photos/seed/case4/680/820" alt="Hyperia" />
-            <div>
-              <h3>Hyperia</h3>
-              <p>Commerce interface for slow luxury.</p>
-            </div>
-          </article>
+      <section class="panel modern-case is-observe" id="case-studies">
+        <div class="section-head">
+          <p class="chip">Case Studies</p>
+          <div>
+            <h2>We render businesses so irresistible they tilt markets.</h2>
+            <a class="pill-link" href="#">Explore</a>
+          </div>
+        </div>
+        <div class="case-rail-wrapper">
+          <div class="case-rail loop" aria-label="Case study gallery">
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case1/480/600" alt="Vessna brand" />
+              <div>
+                <strong>Vessna</strong>
+                <p>Global ritual brand for daily calm.</p>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case2/480/600" alt="Marin Labs" />
+              <div>
+                <strong>Marin Labs</strong>
+                <p>Biotech story-craft for care networks.</p>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case3/480/600" alt="Studio Alto" />
+              <div>
+                <strong>Studio Alto</strong>
+                <p>Architecture films about human scale.</p>
+              </div>
+            </article>
+            <article class="case-card">
+              <img src="https://picsum.photos/seed/case4/480/600" alt="Hyperia" />
+              <div>
+                <strong>Hyperia</strong>
+                <p>Commerce interface for slow luxury.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case1/480/600" alt="" />
+              <div>
+                <strong>Vessna</strong>
+                <p>Global ritual brand for daily calm.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case2/480/600" alt="" />
+              <div>
+                <strong>Marin Labs</strong>
+                <p>Biotech story-craft for care networks.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case3/480/600" alt="" />
+              <div>
+                <strong>Studio Alto</strong>
+                <p>Architecture films about human scale.</p>
+              </div>
+            </article>
+            <article class="case-card" aria-hidden="true">
+              <img src="https://picsum.photos/seed/case4/480/600" alt="" />
+              <div>
+                <strong>Hyperia</strong>
+                <p>Commerce interface for slow luxury.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="panel split is-observe" id="arts">
-        <div>
-          <p class="chip">Arts & Culture</p>
-          <h2>Learning to see with unhurried attention.</h2>
-          <p>
-            Residency notes, textiles, and films shaping a slower internet. Longform stories for
-            collectors and cultural partners.
-          </p>
-          <a class="solid-btn light" href="#">Explore stories</a>
+      <section class="panel modern-arts is-observe" id="arts">
+        <div class="arts-hero">
+          <div>
+            <p class="chip">Arts & Culture</p>
+            <h2>Learning to see with unhurried attention.</h2>
+            <a class="solid-btn light" href="#">Explore</a>
+          </div>
+          <figure>
+            <img src="https://picsum.photos/seed/arts/1000/600" alt="Arts & culture" />
+          </figure>
         </div>
-        <div class="story-list">
+        <div class="story-rail" aria-label="Stories">
           <article>
-            <img src="https://picsum.photos/seed/storyA/480/360" alt="Story A" />
+            <img src="https://picsum.photos/seed/storyA/320/200" alt="Story A" />
             <div>
-              <h3>Night lectures in Lisbon</h3>
-              <p>Analog rituals for new publishing.</p>
+              <p>Story</p>
+              <strong>Night lectures in Lisbon.</strong>
             </div>
+            <span aria-hidden="true">→</span>
           </article>
           <article>
-            <img src="https://picsum.photos/seed/storyB/480/360" alt="Story B" />
+            <img src="https://picsum.photos/seed/storyB/320/200" alt="Story B" />
             <div>
-              <h3>Textiles for protest</h3>
-              <p>Handcrafted signals in public space.</p>
+              <p>Story</p>
+              <strong>Textiles for protest.</strong>
             </div>
+            <span aria-hidden="true">→</span>
           </article>
           <article>
-            <img src="https://picsum.photos/seed/storyC/480/360" alt="Story C" />
+            <img src="https://picsum.photos/seed/storyC/320/200" alt="Story C" />
             <div>
-              <h3>Serif School, season six</h3>
-              <p>Letterforms for tactile experiences.</p>
+              <p>Story</p>
+              <strong>Serif school, season six.</strong>
             </div>
+            <span aria-hidden="true">→</span>
           </article>
+        </div>
+        <div class="endcap">
+          <div class="endcap-links">
+            <a href="#arts">Arts & Culture</a>
+            <a href="#case-studies">Stories</a>
+          </div>
+          <div class="endcap-meta">
+            <div class="meta-links">
+              <a href="mailto:presspersona@outlook.com">Work with us</a>
+              <a href="#">Team</a>
+              <a href="#">Careers</a>
+              <a href="#">Press</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>

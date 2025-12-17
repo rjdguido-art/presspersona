@@ -173,6 +173,10 @@ iframe {
   padding: clamp(1rem, 5vw, 2rem) 0 clamp(3rem, 8vw, 4rem);
 }
 
+.brandgen-main .container {
+  width: min(1400px, 96vw);
+}
+
 .frame-wrapper {
   position: relative;
   border-radius: var(--radius);
@@ -184,7 +188,7 @@ iframe {
 
 .frame-wrapper iframe {
   width: 100%;
-  min-height: 70vh;
+  min-height: clamp(600px, 85vh, 1200px);
   border-radius: calc(var(--radius) - 18px);
   background: #000;
 }
@@ -238,6 +242,6 @@ iframe {
   }
 
   .frame-wrapper iframe {
-    min-height: 65vh;
+    min-height: clamp(520px, 80vh, 900px);
   }
 }

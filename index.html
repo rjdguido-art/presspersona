@@ -2,97 +2,112 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="PressPersona — editorial portfolio of brand programs, case studies, and arts projects."
+      content="PressPersona — modern Apple-inspired showcase of brand programs, case studies, and arts projects."
     />
-    <title>PressPersona</title>
+    <title>PressPersona — Modern</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500&family=Montserrat:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/titular" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/highest-praise" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/legitima" />
+    <link rel="stylesheet" href="modern.css" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <header class="site-header" aria-label="Primary">
-      <div class="logo-cluster">
-        <div class="wordmark">PressPersona</div>
-        <a class="theme-switch" href="modern.html">Modern Theme</a>
+    <header class="modern-header">
+      <div class="logo-stack">
+        <a class="logo" href="#home">PressPersona</a>
+        <a class="theme-switch" href="classic.html">Classic Theme</a>
       </div>
+      <nav class="modern-nav" aria-label="Primary">
+        <a href="#home">Overview</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#arts">Arts & Culture</a>
+        <a href="research.html">Research</a>
+        <a href="mailto:presspersona@outlook.com">Contact</a>
+      </nav>
       <div class="header-actions">
-        <a class="btn-quote" href="mailto:presspersona@outlook.com">Get a Quote</a>
-        <a class="btn-quote btn-lang" href="es.html" lang="es">ES</a>
-        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-overlay">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Open menu</span>
+        <a class="ghost-btn" href="BrandGen.html">Launch BrandGen</a>
+        <button
+          class="ghost-btn research-launcher"
+          type="button"
+          aria-expanded="false"
+          aria-controls="research-panel"
+        >
+          Research
         </button>
       </div>
     </header>
 
-    <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
-      <div
-        class="menu-overlay__panel"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="menu-title"
-      >
-        <button class="menu-close" type="button" aria-label="Close menu">&times;</button>
-        <div class="menu-overlay__grid">
-          <nav class="menu-overlay__nav" aria-label="Primary navigation" id="menu-title">
-            <a href="#home">Home</a>
-            <a href="#case-studies">Case Studies</a>
-            <a href="#arts">Arts & Culture</a>
-            <a href="mailto:presspersona@outlook.com">Contact</a>
-          </nav>
-          <div class="menu-overlay__cta">
-            <p class="eyebrow">Labs</p>
-            <div class="menu-overlay__cta-copy">
-              <p>Jump into our AI-assisted playground for instant brand stories.</p>
-              <a class="menu-brandgen-btn" href="BrandGen.html">Launch BrandGen</a>
+    <main class="modern-main" id="main">
+      <section class="panel modern-hero is-observe" id="home">
+        <p class="chip">Web marketing & experience design</p>
+        <h1 class="hero-title hero-font-montserrat" data-hero-rotator>
+          Give your brand the polish of a flagship launch.
+        </h1>
+        <div class="hero-divider" aria-hidden="true"></div>
+        <div class="hero-brandgen-cta">
+          <a class="solid-btn" href="BrandGen.html">Try BrandGen</a>
+          <button class="ghost-btn" data-scroll="#case-studies">See casework</button>
+        </div>
+        <h3 class="hero-subhead">
+          Take advantage of BrandGen's AI capabilities to explore new narratives faster.
+        </h3>
+        <div class="hero-video-gallery" aria-label="BrandGen video gallery">
+          <div class="hero-video-track">
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1216.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1217.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1218.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1216.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1217.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
+            </div>
+            <div class="hero-video">
+              <video autoplay muted loop playsinline>
+                <source src="https://presspersona.blob.core.windows.net/images/1218.mp4" type="video/mp4" />
+                BrandGen showcase video
+              </video>
             </div>
           </div>
-        </div>
-        <div class="menu-meta">
-          <a href="mailto:presspersona@outlook.com">presspersona@outlook.com</a>
-        </div>
-      </div>
-    </div>
-
-    <main id="main">
-      <section class="hero is-observe" id="home">
-        <div class="container">
-          <p class="eyebrow">Web marketing & experience design</p>
-          <h1>Give your brand the polish of a flagship launch.</h1>
-          <p class="lead">
-            We build landing systems, marketing sites, and digital touchpoints that feel as
-            thoughtful as a keynote. Data-informed experiments, world-class craft.
-          </p>
-          <div class="hero-actions">
-            <a class="primary-btn" href="mailto:presspersona@outlook.com">Plan a project</a>
-            <button class="secondary-btn" type="button" data-scroll="#case-studies">
-              See our work
-            </button>
-          </div>
-          <figure class="hero-media">
-            <img src="https://picsum.photos/seed/hero/1200/640" alt="Featured work collage" />
-          </figure>
         </div>
       </section>
 
-      <section class="case-studies is-observe" id="case-studies">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Case Studies</p>
-            <div>
-              <h2>We render businesses so irresistible they tilt markets.</h2>
-              <a class="btn-pill" href="#">Explore</a>
-            </div>
+      <section class="panel modern-case is-observe" id="case-studies">
+        <div class="section-head">
+          <p class="chip">Case Studies</p>
+          <div>
+            <h2>We render businesses so irresistible they tilt markets.</h2>
+            <a class="pill-link" href="#">Explore</a>
           </div>
         </div>
         <div class="case-rail-wrapper">
@@ -157,57 +172,54 @@
         </div>
       </section>
 
-      <section class="arts is-observe" id="arts">
-        <div class="arts-backdrop" aria-hidden="true"></div>
-        <div class="arts-content container">
-          <div class="arts-hero">
+      <section class="panel modern-arts is-observe" id="arts">
+        <div class="arts-hero">
+          <div>
+            <p class="chip">Arts & Culture</p>
+            <h2>Learning to see with unhurried attention.</h2>
+            <a class="solid-btn light" href="#">Explore</a>
+          </div>
+          <figure>
+            <img src="https://picsum.photos/seed/arts/1000/600" alt="Arts & culture" />
+          </figure>
+        </div>
+        <div class="story-rail" aria-label="Stories">
+          <article>
+            <img src="https://picsum.photos/seed/storyA/320/200" alt="Story A" />
             <div>
-              <p class="eyebrow">Arts & Culture</p>
-              <h2>Learning to see with unhurried attention.</h2>
-              <a class="btn-pill light" href="#">Explore</a>
+              <p>Story</p>
+              <strong>Night lectures in Lisbon.</strong>
             </div>
-            <figure>
-              <img src="https://picsum.photos/seed/arts/1000/600" alt="Arts & culture" />
-            </figure>
-          </div>
-          <div class="story-rail" aria-label="Stories">
-            <article>
-              <img src="https://picsum.photos/seed/storyA/320/200" alt="Story A" />
-              <div>
-                <p>Story</p>
-                <strong>Night lectures in Lisbon.</strong>
-              </div>
-              <span aria-hidden="true">→</span>
-            </article>
-            <article>
-              <img src="https://picsum.photos/seed/storyB/320/200" alt="Story B" />
-              <div>
-                <p>Story</p>
-                <strong>Textiles for protest.</strong>
-              </div>
-              <span aria-hidden="true">→</span>
-            </article>
-            <article>
-              <img src="https://picsum.photos/seed/storyC/320/200" alt="Story C" />
-              <div>
-                <p>Story</p>
-                <strong>Serif school, season six.</strong>
-              </div>
-              <span aria-hidden="true">→</span>
-            </article>
-          </div>
-          <div class="endcap">
-            <div class="endcap-links">
-              <a href="#arts">Arts & Culture</a>
-              <a href="#case-studies">Stories</a>
+            <span aria-hidden="true">→</span>
+          </article>
+          <article>
+            <img src="https://picsum.photos/seed/storyB/320/200" alt="Story B" />
+            <div>
+              <p>Story</p>
+              <strong>Textiles for protest.</strong>
             </div>
-            <div class="endcap-meta">
-              <div class="meta-links">
-                <a href="mailto:presspersona@outlook.com">Work with us</a>
-                <a href="#">Team</a>
-                <a href="#">Careers</a>
-                <a href="#">Press</a>
-              </div>
+            <span aria-hidden="true">→</span>
+          </article>
+          <article>
+            <img src="https://picsum.photos/seed/storyC/320/200" alt="Story C" />
+            <div>
+              <p>Story</p>
+              <strong>Serif school, season six.</strong>
+            </div>
+            <span aria-hidden="true">→</span>
+          </article>
+        </div>
+        <div class="endcap">
+          <div class="endcap-links">
+            <a href="#arts">Arts & Culture</a>
+            <a href="#case-studies">Stories</a>
+          </div>
+          <div class="endcap-meta">
+            <div class="meta-links">
+              <a href="mailto:presspersona@outlook.com">Work with us</a>
+              <a href="#">Team</a>
+              <a href="#">Careers</a>
+              <a href="#">Press</a>
             </div>
           </div>
         </div>
@@ -221,7 +233,7 @@
         aria-expanded="false"
         aria-controls="chat-panel"
       >
-        <span>Chat with BrandGen</span>
+        Chat with BrandGen
       </button>
       <section
         class="chat-panel"
@@ -231,9 +243,7 @@
         aria-label="BrandGen chat assistant"
         tabindex="-1"
       >
-        <button class="chat-panel__close" type="button" aria-label="Close chat window">
-          &times;
-        </button>
+        <button class="chat-panel__close" type="button" aria-label="Close chat window">&times;</button>
         <div class="chat-panel__iframe-wrapper" aria-live="off">
           <iframe
             class="chat-panel__iframe"
@@ -245,17 +255,40 @@
       </section>
     </div>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> PressPersona.</p>
-        <div class="footer-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="mailto:presspersona@outlook.com">presspersona@outlook.com</a>
+    <div class="research-widget" aria-live="polite">
+      <section
+        class="chat-panel"
+        id="research-panel"
+        aria-hidden="true"
+        role="dialog"
+        aria-label="Persona Research workspace"
+        tabindex="-1"
+      >
+        <button class="chat-panel__close" type="button" aria-label="Close research window">
+          &times;
+        </button>
+        <div class="chat-panel__iframe-wrapper" aria-live="off">
+          <iframe
+            class="chat-panel__iframe"
+            title="Persona Research"
+            data-src="https://persona-research-457380228664.us-west1.run.app/"
+            loading="lazy"
+          ></iframe>
         </div>
+      </section>
+    </div>
+
+    <footer class="modern-footer">
+      <div>
+        <p>© <span id="modern-year"></span> PressPersona</p>
+        <a href="mailto:presspersona@outlook.com">presspersona@outlook.com</a>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Back to top</a>
+        <a href="BrandGen.html">Labs</a>
       </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="modern.js" defer></script>
   </body>
 </html>
