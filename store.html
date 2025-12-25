@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lucent Supply demo store by PressPersona showcasing ecommerce layout and product storytelling."
+    />
+    <title>Lucent Supply | Demo Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="store.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="store-header">
+      <div class="logo">Lucent Supply</div>
+      <nav class="store-nav" aria-label="Primary">
+        <a href="#new">New in</a>
+        <a href="#collections">Collections</a>
+        <a href="#best">Best sellers</a>
+        <a href="#support">Support</a>
+      </nav>
+      <div class="header-actions">
+        <button class="ghost-btn" type="button">Sign in</button>
+        <button class="cart-btn" type="button" aria-live="polite">
+          Cart <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Online store demo</p>
+          <h1>Launch-ready ecommerce for premium product lines.</h1>
+          <p>
+            A high-contrast storefront designed for fast browsing, strong visuals, and clear paths to
+            purchase. Built to scale across categories and seasonal drops.
+          </p>
+          <div class="hero-actions">
+            <button class="solid-btn" type="button">Shop the drop</button>
+            <button class="ghost-btn" type="button">View lookbook</button>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>48h</strong>
+              <span>average build sprint</span>
+            </div>
+            <div>
+              <strong>35%</strong>
+              <span>higher conversion goal</span>
+            </div>
+            <div>
+              <strong>12</strong>
+              <span>launch templates ready</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80"
+            alt="Modern storefront display with accessories"
+          />
+          <div class="hero-card">
+            <p>Lucent Travel Kit</p>
+            <strong>$128.00</strong>
+            <span>Lightweight essentials in matte black.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="collections">
+        <div class="section-head">
+          <h2>Curated collections</h2>
+          <a href="#" class="text-link">Browse all</a>
+        </div>
+        <div class="collection-grid">
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+              alt="Lifestyle goods curated together"
+            />
+            <div>
+              <h3>Studio Essentials</h3>
+              <p>Desk-ready accessories and everyday carry.</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1450297350677-623de575f31c?auto=format&fit=crop&w=900&q=80"
+              alt="Travel kit arrangement"
+            />
+            <div>
+              <h3>Travel Capsule</h3>
+              <p>Durable kits for short trips and workweeks.</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80"
+              alt="Sneaker product lineup"
+            />
+            <div>
+              <h3>Sport Balance</h3>
+              <p>Performance sneakers and motion-ready wear.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="best">
+        <div class="section-head">
+          <h2>Best sellers</h2>
+          <p>Designed to highlight high-margin items with fast purchase flow.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=900&q=80"
+              alt="Camera product"
+            />
+            <div class="product-info">
+              <h3>City Lens Kit</h3>
+              <p>Compact photo gear</p>
+              <div class="product-meta">
+                <span>$246.00</span>
+                <button class="solid-btn" type="button" data-add>+ Add to cart</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80"
+              alt="Minimal backpack"
+            />
+            <div class="product-info">
+              <h3>Commuter Pack</h3>
+              <p>Waterproof 18L</p>
+              <div class="product-meta">
+                <span>$132.00</span>
+                <button class="solid-btn" type="button" data-add>+ Add to cart</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80"
+              alt="Minimal backpack"
+            />
+            <div class="product-info">
+              <h3>Weekend Duffle</h3>
+              <p>Soft-shell carry</p>
+              <div class="product-meta">
+                <span>$168.00</span>
+                <button class="solid-btn" type="button" data-add>+ Add to cart</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <img
+              src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+              alt="Accessories set"
+            />
+            <div class="product-info">
+              <h3>Studio Organizer</h3>
+              <p>Desk storage kit</p>
+              <div class="product-meta">
+                <span>$86.00</span>
+                <button class="solid-btn" type="button" data-add>+ Add to cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section highlight" id="support">
+        <div>
+          <h2>Shipping and support built in.</h2>
+          <p>Integrated policies, clear delivery windows, and conversion-ready checkout copy.</p>
+        </div>
+        <button class="ghost-btn" type="button">Talk to a specialist</button>
+      </section>
+    </main>
+
+    <footer class="store-footer">
+      <div>
+        <p>Lucent Supply demo by PressPersona</p>
+        <span>hello@presspersona.com</span>
+      </div>
+      <a href="index.html">Back to PressPersona</a>
+    </footer>
+
+    <div class="toast" aria-live="polite" data-toast>Added to cart.</div>
+    <script src="store.js" defer></script>
+  </body>
+</html>

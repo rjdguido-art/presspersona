@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Visit Nicaragua travel demo by PressPersona featuring itineraries and destination storytelling."
+    />
+    <title>Visit Nicaragua | Tourism Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="visit-nicaragua.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="travel-header">
+      <div class="logo">Visit Nicaragua</div>
+      <nav class="travel-nav" aria-label="Primary">
+        <a href="#regions">Regions</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#itineraries">Itineraries</a>
+        <a href="#plan">Plan</a>
+      </nav>
+      <button class="solid-btn" type="button">Plan a trip</button>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Tourism demo</p>
+          <h1>Volcano trails, lake towns, and slow mornings by the sea.</h1>
+          <p>
+            A vibrant destination site designed to highlight regions, itineraries, and booking
+            pathways. Built for tourism boards and travel operators.
+          </p>
+          <div class="hero-actions">
+            <button class="solid-btn" type="button">Explore routes</button>
+            <button class="ghost-btn" type="button">Download guide</button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80"
+            alt="Tropical landscape with mountains"
+          />
+        </div>
+      </section>
+
+      <section class="regions" id="regions">
+        <div class="section-head">
+          <h2>Regions to explore</h2>
+          <p>Each with its own rhythm, food, and coastline.</p>
+        </div>
+        <div class="region-grid">
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1100&q=80"
+              alt="Lake and volcano view"
+            />
+            <div>
+              <h3>Lake district</h3>
+              <p>Island towns, hiking routes, and sunrise viewpoints.</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1100&q=80"
+              alt="Coastal beach view"
+            />
+            <div>
+              <h3>Pacific coast</h3>
+              <p>Surf breaks, seafood kitchens, and sunset beaches.</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1100&q=80"
+              alt="Tropical forest"
+            />
+            <div>
+              <h3>Rainforest north</h3>
+              <p>Eco-lodges, wildlife, and river adventures.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="experiences" id="experiences">
+        <div class="section-head">
+          <h2>Signature experiences</h2>
+        </div>
+        <div class="experience-grid">
+          <div>
+            <strong>Volcano hikes</strong>
+            <span>Guided climbs and crater views.</span>
+          </div>
+          <div>
+            <strong>Coffee routes</strong>
+            <span>Farm stays and tasting flights.</span>
+          </div>
+          <div>
+            <strong>Island hopping</strong>
+            <span>Kayaks, ferries, and coastal towns.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="itineraries" id="itineraries">
+        <div class="section-head">
+          <h2>Sample itineraries</h2>
+          <p>Expand each day for route details.</p>
+        </div>
+        <div class="accordion" data-accordion>
+          <article class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              4-day coastal reset
+            </button>
+            <div class="accordion-panel">
+              <p>Surf mornings, sunset markets, and a day trip to volcanic hot springs.</p>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              7-day lakes and cities
+            </button>
+            <div class="accordion-panel">
+              <p>Colonial streets, island stays, and guided volcano trails.</p>
+            </div>
+          </article>
+          <article class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false">
+              10-day full circuit
+            </button>
+            <div class="accordion-panel">
+              <p>Coast, lake, and rainforest routes with curated transfers.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="plan" id="plan">
+        <div>
+          <h2>Plan with a local guide.</h2>
+          <p>Download starter routes and connect with partner operators.</p>
+        </div>
+        <form>
+          <input type="text" placeholder="Full name" aria-label="Full name" />
+          <input type="email" placeholder="Email" aria-label="Email" />
+          <button type="submit" class="solid-btn">Request itinerary</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="travel-footer">
+      <div>Visit Nicaragua demo by PressPersona</div>
+      <a href="index.html">Back to PressPersona</a>
+    </footer>
+
+    <script src="visit-nicaragua.js" defer></script>
+  </body>
+</html>

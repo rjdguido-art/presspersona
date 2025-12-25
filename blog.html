@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Field Notes Journal demo blog by PressPersona, featuring editorial layout and storytelling design."
+    />
+    <title>Field Notes Journal | Demo Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="blog-header">
+      <div class="brand">Field Notes Journal</div>
+      <nav class="blog-nav" aria-label="Primary">
+        <a href="#latest">Latest</a>
+        <a href="#featured">Features</a>
+        <a href="#topics">Topics</a>
+        <a href="#subscribe">Subscribe</a>
+      </nav>
+      <div class="reading-controls" aria-label="Reading controls">
+        <button type="button" data-font="down">A-</button>
+        <button type="button" data-font="up">A+</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Personal blog demo</p>
+          <h1>Stories from the field, captured with editorial care.</h1>
+          <p>
+            A calming, text-forward layout designed for long reads, photo essays, and personal
+            reflections. Built to keep readers focused and engaged.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://presspersona.blob.core.windows.net/images/TeroSunset.jpeg"
+            alt="Editorial blog hero image"
+          />
+        </div>
+      </section>
+
+      <section class="featured" id="featured">
+        <article class="featured-card">
+          <img
+            src="https://presspersona.blob.core.windows.net/images/Caracola.jpeg"
+            alt="Caracola editorial feature"
+          />
+          <div>
+            <p class="eyebrow">Featured essay</p>
+            <h2>Mapping quiet rituals in coastal mornings.</h2>
+            <p>
+              A reflective essay on pacing, routine, and the small rituals that shape an intentional
+              life.
+            </p>
+            <a href="#" class="text-link">Read the essay</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="latest" id="latest">
+        <div class="section-head">
+          <h2>Latest dispatches</h2>
+          <a href="#" class="text-link">View archive</a>
+        </div>
+        <div class="post-grid">
+          <article class="post-card">
+            <img
+              src="https://presspersona.blob.core.windows.net/images/cr_building.jpeg"
+              alt="Architecture journal story"
+            />
+            <div>
+              <p class="eyebrow">Studio life</p>
+              <h3>Notes from a week of studio rituals.</h3>
+              <p>How design routines keep momentum steady through long projects.</p>
+            </div>
+          </article>
+          <article class="post-card">
+            <img
+              src="https://presspersona.blob.core.windows.net/images/sunset.jpeg"
+              alt="Sunset journal story"
+            />
+            <div>
+              <p class="eyebrow">Photo diary</p>
+              <h3>Chasing sunset gradients across new terrain.</h3>
+              <p>A short photo essay on travel light and documenting color.</p>
+            </div>
+          </article>
+          <article class="post-card">
+            <img
+              src="https://presspersona.blob.core.windows.net/images/TeroSunset.jpeg"
+              alt="Editorial story in warm tones"
+            />
+            <div>
+              <p class="eyebrow">Reflections</p>
+              <h3>What it means to ship work you are proud of.</h3>
+              <p>Thoughts on balancing speed, craft, and sustainability.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="topics" id="topics">
+        <div class="section-head">
+          <h2>Topics readers return to</h2>
+        </div>
+        <div class="topic-grid">
+          <div>
+            <strong>Creative direction</strong>
+            <span>Visual systems, moodboards, and workflows.</span>
+          </div>
+          <div>
+            <strong>Remote life</strong>
+            <span>Notes from quiet work weeks and travel.</span>
+          </div>
+          <div>
+            <strong>Practice</strong>
+            <span>How to build healthy routines for craft.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe" id="subscribe">
+        <div>
+          <h2>Subscribe for weekly field notes.</h2>
+          <p>Short essays and project updates from the studio.</p>
+        </div>
+        <form>
+          <input type="email" placeholder="Email address" aria-label="Email address" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="blog-footer">
+      <div>Field Notes Journal demo by PressPersona</div>
+      <a href="index.html">Back to PressPersona</a>
+    </footer>
+
+    <script src="blog.js" defer></script>
+  </body>
+</html>

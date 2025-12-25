@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (frame && status) {
     const hideStatus = () => {
-      status.textContent = 'BrandGen is ready.';
+      status.textContent = 'Workspace ready.';
       status.classList.add('is-ready');
       setTimeout(() => {
         status.hidden = true;
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fallback in case the iframe refuses to load due to CSP.
     setTimeout(() => {
       if (!status.hidden) {
-        status.textContent = 'BrandGen is available in a new tab if blocked here.';
+        status.textContent = 'Open BrandGen in a new tab if it is blocked here.';
       }
     }, 5000);
   }

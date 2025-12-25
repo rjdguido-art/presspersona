@@ -162,19 +162,19 @@ function initHeroRotator() {
   if (!rotator) return;
   const phrases = [
     {
-      text: 'Give your brand the polish of a flagship launch.',
+      text: 'Lanzamos sitios seguros para equipos ambiciosos.',
       fontClass: 'hero-font-montserrat',
     },
     {
-      text: 'Command attention with Titular-black statements.',
+      text: 'Diseñamos landing pages con nivel de keynote.',
       fontClass: 'hero-font-titular',
     },
     {
-      text: 'Warm every touchpoint with Highest Praise flourishes and color.',
+      text: 'Prototipamos sistemas rápido y luego cuidamos cada detalle.',
       fontClass: 'hero-font-highest',
     },
     {
-      text: 'Pair data and drama with Legitima’s editorial poise.',
+      text: 'Unimos research y dramatismo visual en cada lanzamiento.',
       fontClass: 'hero-font-legitima',
     },
   ];

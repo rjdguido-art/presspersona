@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Casa Brasa restaurant demo by PressPersona featuring menu filters and reservation layout."
+    />
+    <title>Casa Brasa | Restaurant Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="restaurant.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="restaurant-header">
+      <div class="logo">Casa Brasa</div>
+      <nav class="restaurant-nav" aria-label="Primary">
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#events">Events</a>
+        <a href="#reserve">Reserve</a>
+      </nav>
+      <button class="solid-btn" type="button">Book a table</button>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Restaurant demo</p>
+          <h1>Smoke, citrus, and seasonal plates.</h1>
+          <p>
+            A hospitality layout built for mood and momentum. Highlight signature dishes, seasonal
+            menus, and online reservations in a single scroll.
+          </p>
+          <div class="hero-actions">
+            <button class="solid-btn" type="button">Reserve a table</button>
+            <button class="ghost-btn" type="button">View tasting menu</button>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80"
+            alt="Restaurant dining table with plates"
+          />
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="section-head">
+          <h2>Menu highlights</h2>
+          <div class="filter-group" role="tablist">
+            <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="small">Small plates</button>
+            <button class="filter-btn" type="button" data-filter="mains">Mains</button>
+            <button class="filter-btn" type="button" data-filter="dessert">Dessert</button>
+          </div>
+        </div>
+        <div class="menu-grid" data-menu-grid>
+          <article class="menu-card" data-category="small">
+            <img
+              src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80"
+              alt="Small plate with garnish"
+            />
+            <div>
+              <h3>Citrus crudo</h3>
+              <p>Yuzu, chile oil, cured citrus</p>
+              <span>$14</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="small">
+            <img
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+              alt="Small plate selection"
+            />
+            <div>
+              <h3>Charred scallions</h3>
+              <p>Smoked butter, toasted crumbs</p>
+              <span>$12</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="mains">
+            <img
+              src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=900&q=80"
+              alt="Main course dish"
+            />
+            <div>
+              <h3>Fire-grilled lamb</h3>
+              <p>Roasted garlic, tamarind glaze</p>
+              <span>$32</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="mains">
+            <img
+              src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=900&q=80"
+              alt="Main course with grains"
+            />
+            <div>
+              <h3>Market risotto</h3>
+              <p>Seasonal vegetables, citrus zest</p>
+              <span>$26</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="dessert">
+            <img
+              src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=900&q=80"
+              alt="Dessert plate"
+            />
+            <div>
+              <h3>Honey citrus tart</h3>
+              <p>Whipped ricotta, candied peel</p>
+              <span>$11</span>
+            </div>
+          </article>
+          <article class="menu-card" data-category="dessert">
+            <img
+              src="https://images.unsplash.com/photo-1447078806655-40579c2520d6?auto=format&fit=crop&w=900&q=80"
+              alt="Dessert bowl"
+            />
+            <div>
+              <h3>Smoked cacao</h3>
+              <p>Dark chocolate, sea salt</p>
+              <span>$10</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div>
+          <p class="eyebrow">Our story</p>
+          <h2>Built around open fire and shared tables.</h2>
+          <p>
+            Casa Brasa blends coastal ingredients with open-flame technique. The atmosphere balances
+            warmth, detail, and a sense of ceremony.
+          </p>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1100&q=80"
+          alt="Restaurant interior scene"
+        />
+      </section>
+
+      <section class="events" id="events">
+        <h2>Private dining and events</h2>
+        <div class="event-grid">
+          <div>
+            <strong>Chef table</strong>
+            <p>Up to 12 guests, custom tasting menu.</p>
+          </div>
+          <div>
+            <strong>Studio dinners</strong>
+            <p>Corporate gatherings, curated beverage pairings.</p>
+          </div>
+          <div>
+            <strong>Seasonal pop-ups</strong>
+            <p>Rotating guest chefs and late-night service.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reserve" id="reserve">
+        <div>
+          <h2>Reserve a table</h2>
+          <p>Book two weeks ahead for weekends. Walk-ins are welcome at the bar.</p>
+        </div>
+        <form>
+          <input type="text" placeholder="Name" aria-label="Name" />
+          <input type="email" placeholder="Email" aria-label="Email" />
+          <input type="date" aria-label="Date" />
+          <button type="submit" class="solid-btn">Request reservation</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="restaurant-footer">
+      <div>Casa Brasa demo by PressPersona</div>
+      <a href="index.html">Back to PressPersona</a>
+    </footer>
+
+    <script src="restaurant.js" defer></script>
+  </body>
+</html>

@@ -81,19 +81,19 @@
     if (!rotator) return;
     const phrases = [
       {
-        text: 'Give your brand the polish of a flagship launch.',
+        text: 'See four distinct site styles built for real clients.',
         fontClass: 'hero-font-montserrat',
       },
       {
-        text: 'Command attention with Titular-black statements.',
+        text: 'Explore ecommerce, editorial, hospitality, and travel demos.',
         fontClass: 'hero-font-titular',
       },
       {
-        text: 'Warm every touchpoint with Highest Praise flourishes and color.',
+        text: 'Each page is a full build, ready to customize.',
         fontClass: 'hero-font-highest',
       },
       {
-        text: 'Pair data and drama with Legitima’s editorial poise.',
+        text: 'Pick a layout and we will tailor it to your brand.',
         fontClass: 'hero-font-legitima',
       },
     ];

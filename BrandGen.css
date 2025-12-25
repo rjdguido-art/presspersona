@@ -1,10 +1,11 @@
 :root {
-  --ink: #0f172a;
-  --paper: #f8f5ef;
-  --night: #050c1a;
-  --accent: #ffd166;
-  --accent-ink: #2c1f07;
-  --muted: rgba(248, 245, 239, 0.72);
+  --ink: #f4f7ff;
+  --paper: #040914;
+  --night: #03070f;
+  --accent: #6adcf7;
+  --accent-alt: #a879ff;
+  --accent-ink: #03070f;
+  --muted: rgba(244, 247, 255, 0.65);
   --radius: 28px;
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -17,8 +18,9 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  color: var(--paper);
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 45%), #050c1a;
+  color: var(--ink);
+  background: radial-gradient(circle at 15% 25%, rgba(106, 220, 247, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(168, 121, 255, 0.18), transparent 45%), var(--night);
   min-height: 100vh;
   line-height: 1.6;
 }
@@ -58,7 +60,7 @@ iframe {
   text-transform: uppercase;
   letter-spacing: 0.22em;
   font-size: 0.8rem;
-  color: var(--muted);
+  color: var(--accent);
   margin-bottom: 0.5rem;
 }
 
@@ -70,11 +72,11 @@ iframe {
 
 .brandgen-header {
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(6, 12, 31, 0.85);
+  border-bottom: 1px solid rgba(244, 247, 255, 0.12);
+  background: rgba(3, 7, 16, 0.85);
   position: sticky;
   top: 0;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
   z-index: 20;
   transition: padding 0.25s ease, background 0.25s ease, border-color 0.25s ease,
     box-shadow 0.25s ease;
@@ -90,9 +92,9 @@ iframe {
 
 .brandgen-header.is-compact {
   padding: 0.45rem 0;
-  background: rgba(6, 12, 31, 0.95);
-  border-bottom-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  background: rgba(3, 7, 16, 0.95);
+  border-bottom-color: rgba(244, 247, 255, 0.22);
+  box-shadow: 0 10px 35px rgba(2, 6, 23, 0.65);
 }
 
 .brandgen-header.is-compact .container {
@@ -148,7 +150,7 @@ iframe {
 }
 
 .ghost-link {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--muted);
 }
 
 .primary-btn {
@@ -157,16 +159,17 @@ iframe {
   justify-content: center;
   padding: 0.85rem 1.8rem;
   border-radius: 999px;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-alt));
   color: var(--accent-ink);
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.55);
 }
 
 .primary-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 25px 60px rgba(2, 6, 23, 0.65);
 }
 
 .brandgen-main {
@@ -180,10 +183,10 @@ iframe {
 .frame-wrapper {
   position: relative;
   border-radius: var(--radius);
-  background: rgba(2, 6, 23, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(11, 18, 35, 0.85);
+  border: 1px solid rgba(244, 247, 255, 0.12);
   padding: clamp(1rem, 3vw, 1.5rem);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 30px 80px rgba(2, 6, 23, 0.65);
 }
 
 .frame-wrapper iframe {
@@ -200,10 +203,10 @@ iframe {
   transform: translateX(-50%);
   padding: 0.4rem 1rem;
   border-radius: 999px;
-  background: rgba(5, 12, 26, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(3, 7, 16, 0.8);
+  border: 1px solid rgba(244, 247, 255, 0.18);
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(244, 247, 255, 0.85);
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
@@ -213,13 +216,13 @@ iframe {
 }
 
 .brandgen-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(244, 247, 255, 0.08);
   padding: 1.5rem 0 3rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(244, 247, 255, 0.72);
 }
 
 .brandgen-footer a {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(244, 247, 255, 0.85);
   text-decoration: none;
 }
 

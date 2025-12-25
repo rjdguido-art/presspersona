@@ -1,10 +1,11 @@
 :root {
-  --bg: #0c0f16;
-  --surface: #151a24;
-  --surface-alt: #101521;
+  --bg: #030710;
+  --surface: #0b1220;
+  --surface-alt: #111a2c;
   --ink: #f4f6ff;
-  --muted: rgba(244, 246, 255, 0.65);
-  --accent: #5bc0f8;
+  --muted: rgba(244, 246, 255, 0.68);
+  --accent: #6adcf7;
+  --accent-strong: #a879ff;
   --border: rgba(244, 246, 255, 0.12);
   --radius: 32px;
   --transition: 0.4s ease;
@@ -17,7 +18,8 @@
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top, #172032, #090c12);
+  background: radial-gradient(circle at 15% 25%, rgba(106, 220, 247, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(168, 121, 255, 0.18), transparent 45%), var(--bg);
   color: var(--ink);
   min-height: 100vh;
 }
@@ -108,11 +110,12 @@ button:focus-visible {
   color: var(--ink);
   font-weight: 500;
   cursor: pointer;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
 }
 
 .ghost-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(244, 247, 255, 0.1);
+  box-shadow: 0 12px 24px rgba(2, 6, 23, 0.55);
 }
 
 .research-main {
@@ -127,14 +130,14 @@ button:focus-visible {
   padding: clamp(2rem, 5vw, 3.2rem);
   margin-bottom: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 50px 80px rgba(2, 6, 23, 0.65);
 }
 
 .chip {
   text-transform: uppercase;
   letter-spacing: 0.35em;
   font-size: 0.7rem;
-  color: var(--muted);
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 
@@ -156,7 +159,7 @@ button:focus-visible {
 }
 
 .pill-link {
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(244, 247, 255, 0.2);
   padding: 0.45rem 1.4rem;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -164,13 +167,14 @@ button:focus-visible {
 }
 
 .pill-link:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(244, 247, 255, 0.22);
+  color: #030710;
 }
 
 .embed-frame {
   border-radius: 26px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(244, 247, 255, 0.12);
   background: #05070c;
 }
 

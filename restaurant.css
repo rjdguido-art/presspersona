@@ -1,0 +1,272 @@
+:root {
+  --ink: #f7f1ea;
+  --muted: rgba(247, 241, 234, 0.7);
+  --accent: #f4b24a;
+  --accent-strong: #e95d3a;
+  --bg: #1a0f0c;
+  --surface: rgba(255, 255, 255, 0.04);
+  --line: rgba(255, 255, 255, 0.12);
+  --radius: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Barlow', system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(233, 93, 58, 0.2), transparent 45%),
+    radial-gradient(circle at 70% 10%, rgba(244, 178, 74, 0.18), transparent 45%), var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.skip {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -140%);
+  background: #000;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.skip:focus {
+  transform: translate(-50%, 20%);
+}
+
+.restaurant-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.2rem clamp(1.2rem, 4vw, 3rem);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(18px);
+  background: rgba(26, 15, 12, 0.85);
+  border-bottom: 1px solid var(--line);
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+}
+
+.restaurant-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  color: var(--muted);
+}
+
+.solid-btn,
+.ghost-btn {
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.solid-btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #1a0f0c;
+  border: none;
+}
+
+main {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  margin: 0 0 1rem;
+}
+
+.hero-media img {
+  border-radius: var(--radius);
+  height: 100%;
+  object-fit: cover;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.menu {
+  margin-top: 3.5rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-btn {
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.filter-btn.is-active {
+  color: #1a0f0c;
+  background: var(--accent);
+  border-color: transparent;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+}
+
+.menu-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.menu-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-card div {
+  padding: 0 1rem 1rem;
+}
+
+.menu-card span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.story {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.story img {
+  border-radius: var(--radius);
+  object-fit: cover;
+  height: 100%;
+}
+
+.events {
+  margin-top: 3.5rem;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.event-grid div {
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.reserve {
+  margin-top: 3.5rem;
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: #1f1512;
+  border: 1px solid var(--line);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.reserve form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+
+.reserve input {
+  border-radius: 12px;
+  border: none;
+  padding: 0.6rem 0.8rem;
+}
+
+.restaurant-footer {
+  width: min(1200px, 92vw);
+  margin: 0 auto 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .restaurant-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .restaurant-nav {
+    flex-wrap: wrap;
+  }
+}
